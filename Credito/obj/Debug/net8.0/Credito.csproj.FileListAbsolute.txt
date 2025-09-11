@@ -1,0 +1,14 @@
+E:\proyectos programacion distibuida\Credito\Credito\bin\Debug\net8.0\Credito.exe
+E:\proyectos programacion distibuida\Credito\Credito\bin\Debug\net8.0\Credito.deps.json
+E:\proyectos programacion distibuida\Credito\Credito\bin\Debug\net8.0\Credito.runtimeconfig.json
+E:\proyectos programacion distibuida\Credito\Credito\bin\Debug\net8.0\Credito.dll
+E:\proyectos programacion distibuida\Credito\Credito\bin\Debug\net8.0\Credito.pdb
+E:\proyectos programacion distibuida\Credito\Credito\obj\Debug\net8.0\Credito.GeneratedMSBuildEditorConfig.editorconfig
+E:\proyectos programacion distibuida\Credito\Credito\obj\Debug\net8.0\Credito.AssemblyInfoInputs.cache
+E:\proyectos programacion distibuida\Credito\Credito\obj\Debug\net8.0\Credito.AssemblyInfo.cs
+E:\proyectos programacion distibuida\Credito\Credito\obj\Debug\net8.0\Credito.csproj.CoreCompileInputs.cache
+E:\proyectos programacion distibuida\Credito\Credito\obj\Debug\net8.0\Credito.dll
+E:\proyectos programacion distibuida\Credito\Credito\obj\Debug\net8.0\refint\Credito.dll
+E:\proyectos programacion distibuida\Credito\Credito\obj\Debug\net8.0\Credito.pdb
+E:\proyectos programacion distibuida\Credito\Credito\obj\Debug\net8.0\Credito.genruntimeconfig.cache
+E:\proyectos programacion distibuida\Credito\Credito\obj\Debug\net8.0\ref\Credito.dll
