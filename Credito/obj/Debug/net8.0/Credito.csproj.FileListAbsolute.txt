@@ -12,3 +12,4 @@ E:\proyectos programacion distibuida\Credito\Credito\obj\Debug\net8.0\refint\Cre
 E:\proyectos programacion distibuida\Credito\Credito\obj\Debug\net8.0\Credito.pdb
 E:\proyectos programacion distibuida\Credito\Credito\obj\Debug\net8.0\Credito.genruntimeconfig.cache
 E:\proyectos programacion distibuida\Credito\Credito\obj\Debug\net8.0\ref\Credito.dll
+E:\proyectos programacion distibuida\Credito\Credito\obj\Debug\net8.0\Credito.sourcelink.json

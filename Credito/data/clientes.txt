@@ -1,3 +1,54 @@
-1;Luis;1231231231;lrivas@gmail.com;312312312;10000000;Cra 123 - 123 - 12
-2;Luis;1231231232;lrivas@gmail.com;312312312;10000000;Cra 123 - 123 - 12
-3;Luis;1231231233;lrivas@gmail.com;312312312;10000000;Cra 123 - 123 - 12
+1;Luis;1000123456;l.rivas@gmail.com;3001112233;25000000;Carrera 123 # 45 - 67
+2;Ana;2000234567;a.garcia@hotmail.com;3012223344;30000000;Calle 89 # 10 - 11
+3;Carlos;3000345678;c.sanchez@yahoo.es;3023334455;18500000;Avenida 56 # 78 - 90
+4;Marta;4000456789;m.lopez@gmail.com;3034445566;42000000;Carrera 34 # 12 - 34
+5;Juan;5000567890;j.martinez@outlook.com;3045556677;15000000;Calle 56 # 78 - 90
+6;Sofia;6000678901;s.rodriguez@gmail.com;3056667788;28000000;Avenida 10 # 20 - 30
+7;Diego;7000789012;d.fernandez@yahoo.es;3067778899;35000000;Carrera 7 # 8 - 9
+8;Laura;8000890123;l.perez@hotmail.com;3078889900;19000000;Calle 23 # 45 - 67
+9;Andres;9000901234;a.gonzalez@gmail.com;3089990011;50000000;Avenida Principal # 1 - 2
+10;Valeria;1001012345;v.gomez@outlook.com;3090001122;22000000;Carrera 45 # 6 - 7
+11;Maria;1101123456;m.diaz@gmail.com;3101112233;31000000;Calle 100 # 10 - 05
+12;Pablo;1201234567;p.torres@yahoo.es;3112223344;17500000;Avenida Las Rosas # 8 - 15
+13;Camila;1301345678;c.jimenez@hotmail.com;3123334455;26000000;Carrera 20 # 30 - 40
+14;Daniel;1401456789;d.ruiz@gmail.com;3134445566;29500000;Calle 5 # 67 - 89
+15;Paula;1501567890;p.hernandez@outlook.com;3145556677;14000000;Avenida Sur # 10 - 20
+16;David;1601678901;d.morales@gmail.com;3156667788;45000000;Carrera 9 # 8 - 7
+17;Carolina;1701789012;c.ramirez@yahoo.es;3167778899;21000000;Calle 54 # 32 - 10
+18;Fernando;1801890123;f.castro@hotmail.com;3178889900;33000000;Avenida Norte # 6 - 5
+19;Lorena;1901901234;l.ortiz@gmail.com;3189990011;16000000;Carrera 80 # 70 - 60
+20;Gustavo;2002012345;g.vargas@outlook.com;3190001122;38000000;Calle 25 # 50 - 75
+21;Natalia;2102123456;n.rojas@gmail.com;3201112233;23000000;Avenida Este # 4 - 3
+22;Alejandro;2202234567;a.mendoza@yahoo.es;3212223344;27500000;Carrera 15 # 25 - 35
+23;Monica;2302345678;m.silva@hotmail.com;3223334455;20000000;Calle 95 # 5 - 10
+24;Ricardo;2402456789;r.paredes@gmail.com;3234445566;36000000;Avenida Oeste # 2 - 1
+25;Sofia;2502567890;s.robles@outlook.com;3245556677;19500000;Carrera 50 # 50 - 50
+26;Jorge;2602678901;j.fuentes@gmail.com;3256667788;40000000;Calle 72 # 80 - 90
+27;Gabriela;2702789012;g.marin@yahoo.es;3267778899;24000000;Avenida 30 # 40 - 50
+28;Hector;2802890123;h.cruz@hotmail.com;3278889900;32000000;Carrera 65 # 55 - 45
+29;Elisa;2902901234;e.guzman@gmail.com;3289990011;17000000;Calle 150 # 15 - 20
+30;Patricio;3003012345;p.leon@outlook.com;3290001122;48000000;Avenida El Bosque # 7 - 8
+31;Beatriz;3103123456;b.soto@gmail.com;3301112233;26500000;Carrera 23 # 24 - 25
+32;Felipe;3203234567;f.vera@yahoo.es;3312223344;29000000;Calle 60 # 70 - 80
+33;Claudia;3303345678;c.chavez@hotmail.com;3323334455;15500000;Avenida del Mar # 9 - 10
+34;Martin;3403456789;m.salazar@gmail.com;3334445566;34000000;Carrera 4 # 5 - 6
+35;Romina;3503567890;r.flores@outlook.com;3345556677;20500000;Calle 20 # 3 - 4
+36;Julian;3603678901;j.ramos@gmail.com;3356667788;43000000;Avenida Central # 1 - 1
+37;Brenda;3703789012;b.vega@yahoo.es;3367778899;22500000;Carrera 88 # 99 - 100
+38;Christian;3803890123;c.moya@hotmail.com;3378889900;37000000;Calle 75 # 65 - 55
+39;Viviana;3903901234;v.navarro@gmail.com;3389990011;18000000;Avenida Jardines # 44 - 33
+40;Hugo;4004012345;h.bravo@outlook.com;3390001122;49000000;Carrera 1 # 2 - 3
+41;Diana;4104123456;d.aranda@gmail.com;3401112233;25500000;Calle 12 # 21 - 30
+42;Kevin;4204234567;k.rojas@yahoo.es;3412223344;30500000;Avenida Libertadores # 5 - 10
+43;Jessica;4304345678;j.miranda@hotmail.com;3423334455;16500000;Carrera 70 # 85 - 95
+44;Oscar;4404456789;o.sandoval@gmail.com;3434445566;35500000;Calle 42 # 52 - 62
+45;Daniela;4504567890;d.lagos@outlook.com;3445556677;21500000;Avenida del Sol # 7 - 7
+46;Elias;4604678901;e.caceres@gmail.com;3456667788;41000000;Carrera 90 # 1 - 2
+47;Veronica;4704789012;v.contreras@yahoo.es;3467778899;28500000;Calle 33 # 44 - 55
+48;Ivan;4804890123;i.pizarro@hotmail.com;3478889900;39000000;Avenida Principal # 10 - 20
+49;Melissa;4904901234;m.aguilar@gmail.com;3489990011;14500000;Carrera 11 # 22 - 33
+50;Tomas;5005012345;t.aravena@outlook.com;3490001122;46000000;Calle 50 # 60 - 70
+11234567;mario paredes;11234567;parmar@yahoo.es;3245670987;11000000;avenida siempre viva
+1132121;Kata;1132121;kata@gmail.com;3133133132;2000000;Cra 03-05-04
+12312312;Kata;12312312;kata2@gmail.com;31331331;1800000;Cra 40#34-32
+1231231231;Karen;1231231231;karen@karen.com;3123123121;2500000;Cra 10#10-21

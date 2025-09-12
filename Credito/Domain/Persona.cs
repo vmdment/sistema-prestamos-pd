@@ -9,19 +9,18 @@ namespace Credito.Domain
 {
     public abstract class Persona
     {
-        private static int LAST_ID = 0;
         #region atributos
-        protected string Id { get; set; }
-        protected string NombreCompleto { get; set; }
-        protected string Documento { get; set; }
-        protected string Correo { get; set; }
-        protected string Telefono { get; set; }
+        public string Id { get; protected set; }
+        public string NombreCompleto { get; protected set; }
+        public string Documento { get; protected set; }
+        public string Correo { get; protected set; }
+        public string Telefono { get; protected set; }
         #endregion
       
         #region constructor
         public Persona(string nombreCompleto, string documento, string correo, string telefono)
         {
-            this.Id = (Persona.LAST_ID++).ToString();
+            this.Id = documento;
             this.NombreCompleto = ValidarNombre(nombreCompleto);
             this.Documento = ValidarDocumento(documento);
             this.Correo = ValidarCorreo(correo);

@@ -10,23 +10,26 @@ namespace Credito.Domain
     {
         #region atributos
         
-        private decimal Salario { get; set; }
-        private string Direccion { get; set; }
-        
+        public decimal Salario { get; private set; }
+        public string Direccion { get; private set; }
+        public List<Prestamo> Prestamos { get; private set; }
+
         #endregion
 
         #region contructor
         public Cliente(string nombreCompleto, string documento, string correo, string telefono, decimal salario, string direccion) :
             base(nombreCompleto, documento, correo, telefono)
         {
-            this.Salario = ValidarSalario(salario);
-            this.Direccion = direccion;
+            Salario = ValidarSalario(salario);
+            Direccion = direccion;
+            Prestamos = new List<Prestamo>();
         }
-        public Cliente(string id, string nombreCompleto, string documento, string correo, string telefono, decimal salario, string direccion) :
+        public Cliente(string id, string nombreCompleto, string documento, string correo, string telefono, decimal salario, string direccion, List<Prestamo> prestamos) :
             base(id,nombreCompleto, documento, correo, telefono)
         {
-            this.Salario = ValidarSalario(salario);
-            this.Direccion = direccion;
+            Salario = ValidarSalario(salario);
+            Direccion = direccion;
+            Prestamos = prestamos;
         }
         #endregion
 
@@ -34,6 +37,11 @@ namespace Credito.Domain
         private decimal ValidarSalario(decimal salario) {
             return salario > 0 ? salario : throw new ArgumentOutOfRangeException();
         }
+       
         #endregion
+        public override string ToString()
+        {
+            return $"{Id};{NombreCompleto};{Documento};{Correo};{Telefono};{Salario};{Direccion}";
+        }
     }
 }
