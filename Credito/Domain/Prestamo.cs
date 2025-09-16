@@ -18,6 +18,7 @@ namespace Credito.Domain
         public DateTime FechaCreacion { get; private set; }
         public DateTime FechaActualizacion { get; private set; }
         public bool Estado { get; private set; }
+        public List<Pago> Pagos { get; private set; }
 
         #endregion
         #region constructor
@@ -31,8 +32,9 @@ namespace Credito.Domain
             Interes = DefinirInteres();
             Monto = Capital + (Capital * Interes / 100);
             Estado = true;
+            Pagos = new List<Pago>();
         }
-        public Prestamo(string id, string documentoCliente, decimal capital, decimal monto, decimal interes, DateTime fechaCreacion, DateTime fechaActualizacion,  bool estado)
+        public Prestamo(string id, string documentoCliente, decimal capital, decimal monto, decimal interes, DateTime fechaCreacion, DateTime fechaActualizacion,  bool estado, List<Pago> pagos)
         {
             Id = id;
             DocumentoCliente = documentoCliente;
@@ -42,7 +44,7 @@ namespace Credito.Domain
             FechaCreacion = fechaCreacion;
             FechaActualizacion = fechaActualizacion; 
             Estado = estado;
-
+            Pagos = pagos;
         }
         #endregion
         #region metodos publicos

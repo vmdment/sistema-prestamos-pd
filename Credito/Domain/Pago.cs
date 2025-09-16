@@ -9,15 +9,23 @@ namespace Credito.Domain
     public class Pago
     {
         #region atributos
-        public decimal montoPagado { get; set; }
-        public DateTime fechaDePago { get; set; }
+        public string PrestamoId { get; set; }
+        public decimal Monto { get; set; }
+        public DateTime Fecha { get; set; }
 
         #endregion
         #region constructor
-        public Pago(decimal montoPagado)
+        public Pago(string prestamoId, decimal monto)
         {
-            this.montoPagado = ValidarMonto(montoPagado);
-            this.fechaDePago = DateTime.Today;
+            PrestamoId = prestamoId;
+            Monto = ValidarMonto(monto);
+            Fecha = DateTime.Now;
+        }
+        public Pago(string prestamoId, decimal monto, DateTime fecha)
+        {
+            PrestamoId = prestamoId;
+            Monto = ValidarMonto(monto);
+            Fecha = fecha;
         }
         #endregion
         #region Metodos privados
@@ -28,6 +36,10 @@ namespace Credito.Domain
                 throw new ArgumentException("El monto debe ser mayor a cero");
             }
             return monto;
+        }
+        public override string ToString()
+        {
+            return $"{PrestamoId};{Monto};{Fecha}";
         }
         #endregion
     }

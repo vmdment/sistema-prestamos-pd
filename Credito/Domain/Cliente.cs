@@ -37,7 +37,36 @@ namespace Credito.Domain
         private decimal ValidarSalario(decimal salario) {
             return salario > 0 ? salario : throw new ArgumentOutOfRangeException();
         }
-       
+        public bool RealizarPago()
+        {
+           
+            Prestamo? prestamo = Prestamos.Find((prestamo) => prestamo.Estado == true);
+            if (prestamo == null)
+            {
+                Console.WriteLine("No se encuentran prestamos activos");
+                return false;
+            }
+            bool validate = true;
+            do
+            {
+                
+                Console.Write("monto a pagar:");
+                decimal monto = decimal.Parse(Console.ReadLine() ?? "-1");
+                if(monto == prestamo.Monto)
+                {
+                    //Paga todo
+                }
+                if(monto == prestamo.Monto - (prestamo.Monto * prestamo.Interes / 100))
+                {
+                    // Pago solo capital
+                }
+                if (monto == prestamo.Monto * prestamo.Interes / 100)
+                {
+                    // paso intereses
+                }
+            } while (validate);
+            return true;
+        }
         #endregion
         public override string ToString()
         {

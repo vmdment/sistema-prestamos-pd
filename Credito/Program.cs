@@ -13,9 +13,9 @@ namespace Credito
             Persona persona = Login();
             if (persona != null)
             {
+                Console.WriteLine($"** Bienvenid@: {persona.NombreCompleto} **");
                 if (persona is Empleado)
                 {
-                    Console.WriteLine("Empleado");
                     ProcesarMenuEmpleado((Empleado)persona);
                 }
                 else
@@ -46,7 +46,6 @@ namespace Credito
                     case "1":
                         cliente = empleado.RegistrarCliente();
                         Console.WriteLine("Cliente registrado: " + cliente);
-                        
                         break;
                     case "2":
                         Console.WriteLine("***** REALIZAR PRESTAMO *****");
@@ -56,7 +55,6 @@ namespace Credito
                         if(cliente != null)
                         {
                             Prestamo prestamo = empleado.RealizarPrestamo(cliente);
-                            Console.WriteLine("Prestamo realizado: " + prestamo);
                         }
                         else
                         {
@@ -97,5 +95,42 @@ namespace Credito
                     return opcion.ToString();
             } while (true);
         }
+
+        private static void ProcesarMenuCliente(Cliente cliente)
+        {
+            string opcion;
+            do
+            {
+                
+                opcion = MenuCliente();
+                switch (opcion)
+                {
+                    case "1":
+                        cliente.RealizarPago();
+                        Console.WriteLine("Cliente registrado: " + cliente);
+                        break;
+                    case "0":
+                        Console.WriteLine("Saliendo...");
+                        break;
+                }
+            } while (opcion != "0");
+        }
+        private static string MenuCliente()
+        {
+            do
+            {
+                Console.WriteLine("********************** MENU CLIENTE **********************");
+                Console.WriteLine("1. Realizar Pago");               
+                Console.WriteLine("0. Salir");
+                Console.Write("Seleccione una opción:");
+                int opcion = int.Parse(Console.ReadLine() ?? "-1");
+                if (opcion < 0 || opcion > 1)
+                    Console.WriteLine("Opción inválida, intente de nuevo.");
+                else
+                    return opcion.ToString();
+            } while (true);
+        }
+
+
     }
 }

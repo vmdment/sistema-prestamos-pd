@@ -19,9 +19,7 @@ namespace Credito.Domain
         {}
         public Empleado(string id, string nombreCompleto, string documento, string correo, string telefono) :
             base(id,nombreCompleto, documento, correo, telefono) // llama al constructor de Persona
-        {
-            
-        }
+        {}
         #endregion
 
         #region Métodos publicos de Empleado
@@ -33,7 +31,7 @@ namespace Credito.Domain
         }
         public Prestamo? RealizarPrestamo(Cliente cliente)
         {
-            bool existePrestamo = cliente.Prestamos.Find((prestamo)=> prestamo.Estado) != null;
+            bool existePrestamo = cliente.Prestamos.Find((prestamo)=> prestamo.Estado == true) != null;
             if(existePrestamo)
             {
                 Console.WriteLine("El cliente ya tiene un préstamo activo.");
@@ -45,6 +43,7 @@ namespace Credito.Domain
             {
                 Prestamo prestamo = new Prestamo(cliente.Id, valorPrestamo);
                 prestamoService.GuardarPrestamo(prestamo);
+                Console.WriteLine("Prestamo realizado con exito.");
                 return prestamo;
             }
             Console.WriteLine("El valor a prestar excede el límite permitido.");

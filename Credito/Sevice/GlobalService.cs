@@ -12,9 +12,12 @@ namespace Credito.Sevice
         private GlobalService() { }
 
         private readonly string basePath = Directory.GetCurrentDirectory().Replace(@"\bin\Debug\net8.0", "");
-        public string? ReadLine(string path) {
+        public string? ReadLine(string path)
+        {
             using StreamReader file = new StreamReader(@$"{basePath}{path}");
-            return file.ReadLine();
+            string line = file.ReadLine();
+            file.Dispose();
+            return line;
         }
         public string? ReadAll(string path)
         {
@@ -24,8 +27,12 @@ namespace Credito.Sevice
         public bool WriteLine(string path, string line) {
             try
             {
-                using StreamWriter file = new StreamWriter(@$"{basePath}{path}",true);
-                file.Write($"\n{line}");
+                string? data = ReadLine(path);
+                using StreamWriter file = new StreamWriter(@$"{basePath}{path}",true);                
+                if(data != null)
+                    file.Write($"\n{line}");
+                else
+                    file.Write($"{line}");
                 return true;
             }
             catch (Exception)

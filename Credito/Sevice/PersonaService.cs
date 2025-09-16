@@ -5,10 +5,12 @@ namespace Credito.Sevice
     public class PersonaService
     {
         private GlobalService globalService;
+        private PrestamoService prestamoService;
         public static PersonaService Instance { get; } = new PersonaService();
         private PersonaService()
         {
-            this.globalService = GlobalService.Instance;
+            globalService = GlobalService.Instance;
+            prestamoService = PrestamoService.Instance;
         }
         
         public Persona Login(string documento)
@@ -24,7 +26,10 @@ namespace Credito.Sevice
                     {
                         string[] persona = linea.Split(";");
                         if (archivo == "clientes")
-                            return new Cliente(persona[0], persona[1], persona[2], persona[3], persona[4], decimal.Parse(persona[5]), persona[6].Replace("\r", ""), new List<Prestamo>());
+                        {
+
+                            return new Cliente(persona[0], persona[1], persona[2], persona[3], persona[4], decimal.Parse(persona[5]), persona[6].Replace("\r", ""), prestamoService.BuscarPrestamoPorDocumento(documento));
+                        }
                         else
                             return new Empleado(persona[0], persona[1], persona[2], persona[3], persona[4].Replace("\r",""));
                     }
@@ -42,7 +47,7 @@ namespace Credito.Sevice
                 if (documentoEnArchivo == documento)
                 {
                     string[] persona = linea.Split(";");
-                    return new Cliente(persona[0], persona[1], persona[2], persona[3], persona[4], decimal.Parse(persona[5]), persona[6].Replace("\r", ""), new List<Prestamo>());
+                    return new Cliente(persona[0], persona[1], persona[2], persona[3], persona[4], decimal.Parse(persona[5]), persona[6].Replace("\r", ""),prestamoService.BuscarPrestamoPorDocumento(documento));
                 }
             }
             return null;
