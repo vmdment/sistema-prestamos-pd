@@ -10,13 +10,22 @@ namespace Credito.Sevice
     public class PagoService
     {
         //monto == monto; monto == monto * interes/100; monto == monto - monto * interes / 100;
-        public PagoService Instance { get; private set; } = new PagoService();
+        public static PagoService Instance { get; private set; } = new PagoService();
+        
+        private PrestamoService prestamoService = PrestamoService.Instance;
+                
         private GlobalService globalService = GlobalService.Instance;
         private PagoService() {}
 
-        public bool GuardarPago(Pago pago)
+        public bool GuardarPago(Prestamo prestamo, Pago pago)
         {
-            return globalService.WriteLine(@"\data\pagos.txt", pago.ToString());
+            bool pagoRealizado = globalService.WriteLine(@"\data\pagos.txt", pago.ToString());
+            if (pagoRealizado)
+            { 
+                prestamo.Monto -= pago.Monto;
+                prestamoService.ActualizarPrestamo(prestamo);
+            }
+            return pagoRealizado;
         }
     }
 }

@@ -39,7 +39,7 @@ namespace Credito.Domain
         }
         public override string ToString()
         {
-            return $"{PrestamoId};{Monto};{Fecha}";
+            return $"{PrestamoId};{Monto};{Fecha.ToString("yyyy-MM-ddTHH:mm")}";
         }
         #endregion
     }

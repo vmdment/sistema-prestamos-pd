@@ -15,24 +15,27 @@ namespace Credito.Sevice
         public string? ReadLine(string path)
         {
             using StreamReader file = new StreamReader(@$"{basePath}{path}");
-            string line = file.ReadLine();
+            string? line = file.ReadLine();
             file.Dispose();
             return line;
         }
         public string? ReadAll(string path)
         {
             using StreamReader file = new StreamReader(@$"{basePath}{path}");
-            return file.ReadToEnd();
+            string text = file.ReadToEnd();
+            file.Dispose();
+            return text.Length == 0 ? null : text;
         }
-        public bool WriteLine(string path, string line) {
+        public bool WriteLine(string path, string line, bool append = true) {
             try
             {
                 string? data = ReadLine(path);
-                using StreamWriter file = new StreamWriter(@$"{basePath}{path}",true);                
+                using StreamWriter file = new StreamWriter(@$"{basePath}{path}", append);
                 if(data != null)
                     file.Write($"\n{line}");
                 else
                     file.Write($"{line}");
+                file.Dispose();
                 return true;
             }
             catch (Exception)
@@ -40,5 +43,21 @@ namespace Credito.Sevice
                 return false;
             }
         }
+        public bool Reset(string path)
+        {
+            try
+            {
+                string? data = ReadLine(path);
+                using StreamWriter file = new StreamWriter(@$"{basePath}{path}", false);
+                    file.Write("");
+                file.Dispose();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
     }
 }

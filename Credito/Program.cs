@@ -20,8 +20,7 @@ namespace Credito
                 }
                 else
                 {
-                    
-                    Console.WriteLine("Cliente");
+                    ProcesarMenuCliente((Cliente)persona);
                 }
                 Console.WriteLine(persona);
             }
@@ -107,7 +106,6 @@ namespace Credito
                 {
                     case "1":
                         cliente.RealizarPago();
-                        Console.WriteLine("Cliente registrado: " + cliente);
                         break;
                     case "0":
                         Console.WriteLine("Saliendo...");

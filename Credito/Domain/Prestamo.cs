@@ -13,7 +13,7 @@ namespace Credito.Domain
         public string Id { get; private set; }
         public string DocumentoCliente { get; private set; }
         public decimal Capital { get; private set; }
-        public decimal Monto { get; private set; }
+        public decimal Monto { get; set; }
         public decimal Interes { get; private set; }
         public DateTime FechaCreacion { get; private set; }
         public DateTime FechaActualizacion { get; private set; }
@@ -26,11 +26,11 @@ namespace Credito.Domain
         {
             FechaCreacion = DateTime.Now;
             FechaActualizacion = FechaCreacion;
-            Id = documentoCliente + FechaCreacion.ToString("yyyy-MM-dd");
+            Id = documentoCliente + FechaCreacion.TimeOfDay.TotalMilliseconds;
             DocumentoCliente = documentoCliente;
             Capital = VerificarCapital(capital);
             Interes = DefinirInteres();
-            Monto = Capital + (Capital * Interes / 100);
+            Monto = Capital;
             Estado = true;
             Pagos = new List<Pago>();
         }
@@ -71,7 +71,7 @@ namespace Credito.Domain
 
         #endregion
         #region metodos privados}
-        public bool actualizarEstado(decimal monto, bool estadoPrestamo)
+        public bool ActualizarEstado(decimal monto, bool estadoPrestamo)
         {
             if (monto == 0)
             {
@@ -81,7 +81,7 @@ namespace Credito.Domain
         }
         public override string ToString()
         {
-            return $"{Id};{DocumentoCliente};{Capital};{Monto};{Interes};{FechaCreacion.ToString("yyyy-MM-ddTH:mm")};{FechaActualizacion.ToString("yyyy-MM-ddTH:mm")};{Estado}";
+            return $"{Id};{DocumentoCliente};{Capital};{Monto};{Interes};{FechaCreacion.ToString("yyyy-MM-ddTHH:mm")};{FechaActualizacion.ToString("yyyy-MM-ddTHH:mm")};{Estado}";
         }
         #endregion
     }
